@@ -3,7 +3,7 @@ require('@nomiclabs/hardhat-waffle')
 const fs = require('fs')
 
 //create a .secret file and add your metamask private key (testing?)
-const privateKey = fs.readFileSync('.secret').toString()
+const privateKey = fs.readFileSync('.secret').toString().trim()
 
 module.exports = {
   networks: {
