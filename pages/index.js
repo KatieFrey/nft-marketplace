@@ -22,7 +22,9 @@ export default function Home() {
   async function loadNFTs() {
     /* create a generic provider and query for unsold market items */
     //Infura is our provider
-    const provider = new ethers.providers.JsonRpcProvider()
+    const provider = new ethers.providers.JsonRpcProvider(
+      'https://polygon-mumbai.infura.io/v3/7eb6262d8b1648d2a1badaaf27807cb3',
+    )
 
     //Get instances of contracts
     const tokenContract = new ethers.Contract(
